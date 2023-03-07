@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý nhân viên</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="plugins/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  </head>
+  <body>
+    <div class="container">
+    
+            <!-- Button strigger modal -->
+            <div class="col-1">
+              <button
+                class="btn text-white-50 pb-0 pt-2"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+              >
+                <i class="fas fa-sign-out-alt"></i>
+              </button>
+            </div>
+            <!-- modal-->
+            <div
+              class="modal fade"
+              id="login"
+              tabindex="-1"
+              data-bs-keyboard="false"
+              aria-labelledby="loginLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content border-2 border-primary">
+                  <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white">
+                      <i class="fas fa-th"></i> login
+                    </h5>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row mb-3 pt-2">
+                      <label
+                        for="inputEmail3"
+                        class="col-sm-3 col-form-label text-sm-start"
+                        >Email</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail3"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label
+                        for="inputPassword3"
+                        class="col-sm-3 col-form-label text-sm-start"
+                        >Password</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword3"
+                        />
+                      </div>
+                    </div>
+                    <div class="row justify-content-between">
+                      <div class="col-3 offset-3">
+                        <button type="submit" class="btn btn-primary">
+                          Sign in
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div class="card border-top-2 border-primary">
+            <div class="card-header">
+              <nav class="nav nav-pills card-header-pills bg-light">
+                <div class="col-md-2">
+                  <h4 class="text-black text-center"></h4>
+                  <!-- <a href="#" class="nav-link active text-black bg-light">Major</a> -->
+                </div>
+                <div class="col-1">
+                  <p class="text-muted text-start" style="font-size: 1.2em">
+                 Quản Lý Khách Hàng
+                  </p>
+                </div>
+                <div
+                  class="col-lg-1 col-md-2 col-3 offset-lg-8 offset-md-7 offset-6"
+                >
+                  <button
+                    class="btn btn-primary pb-0"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#newMajorStatic"
+                  >
+                    <p><i class="fas fa-plus"></i> Add</p>
+                  </button>
+                </div>
+                <!-- modal-->
+                <div
+                  class="modal fade"
+                  id="newMajorStatic"
+                  tabindex="-1"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  aria-labelledby="staticBackdropLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">
+                          New Student
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row p-2">
+                          <label
+                            for="inputMajorName"
+                            class="col-3 col-form-label"
+                            >Tên Khách Hàng</label
+                          >
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="outputID"
+                              placeholder="Student ID"
+                            />
+                          </div>
+                        </div>
+                        <div class="row p-2">
+                          <label
+                            for="inputFullName"
+                            class="col-3 col-form-label"
+                            >Họ Tên</label
+                          >
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="outputLastName"
+                              placeholder="Last name"
+                            />
+                          </div>
+                          <div class="col">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="outputFirtsName"
+                              placeholder="Fisrt name"
+                            />
+                          </div>
+                          <label
+                            id="lblFullName"
+                            class="col-2 col-form-label"
+                          ></label>
+                        </div>
+                        <div class="row p-2">
+                          <label
+                            for="Gender"
+                            id="gender"
+                            class="col-3 col-form-label"
+                            >Giới tính</label
+                          >
+                          <div class="form-check col-3 mt-1">
+                            <input
+                              class="form-check-input"
+                              id="genderMale"
+                              type="radio"
+                              name="flexRadioDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault1"
+                            >
+                              Nam
+                            </label>
+                          </div>
+                          <div class="form-check col-3 mt-1">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault2"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault2"
+                            >
+                              Nữ
+                            </label>
+                          </div>
+                        </div>
+                        <div class="row p-2">
+                          <label
+                            for="inputMajorName"
+                            class="col-3 col-form-label"
+                            >Điện thoại</label
+                          >
+
+                          <div class="col">
+                            <input
+                              type="Text"
+                              class="form-control"
+                              id="outputPhone"
+                              placeholder="Phone number"
+                            />
+                          </div>
+                          <label
+                            id="lblPhone"
+                            class="col-2 col-form-label"
+                          ></label>
+                        </div>
+                        <div class="row p-2">
+                          <label
+                            for="inputMajorName"
+                            class="col-3 col-form-label"
+                            >Email</label
+                          >
+
+                          <div class="col">
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="outputEmail"
+                              placeholder="Email address"
+                            />
+                          </div>
+                          <label
+                            id="lblEmail"
+                            class="col-2 col-form-label"
+                          ></label>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button
+                          type="button"
+                          id="btnSave"
+                          class="btn btn-primary"
+                        >
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-2 my-3">Search ID</div>
+                <input
+                  type="text"
+                  class="form-control my-3"
+                  style="width: 200px"
+                />
+                <div class="col-2 my-3">
+                  <buttton class="btn btn-primary">Search</buttton>
+                </div>
+              </div>
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col-1"><p class="text-start">#</p></th>
+                    <th scope="col-auto ">
+                      <p class="text-start">Tên Khách Hàng</p>
+                    </th>
+                    <th scope="col-auto ">
+                      <p class="text-start">Họ Tên</p>
+                    </th>
+                    <th scope="col-auto "><p class="text-start">Giới tính</p></th>
+                    <th scope="col-auto "><p class="text-start">Điện thoại</p></th>
+                    <th scope="col-auto "><p class="text-start">Email</p></th>
+                    <th scope="col-2"></th>
+                  </tr>
+                </thead>
+                <tbody id="tableStudentList">
+                  <tr>
+                    <td class="text-start" id="getNumber">1</td>
+                    <td class="text-start" id="getID">20-0-00188</td>
+                    <td class="text-start" id="getfullName">Le Trung Minh</td>
+                    <td class="text-start" id="getGender">
+                      <i class="fas fa-male fa-2x"></i>
+                    </td>
+                    <td class="text-start" id="getPhone">0397973603</td>
+                    <td class="text-start" id="getEmail">minh@gmail.com</td>
+                    <td class="text-start">
+                      <a href="#" id="getEdit" class="me-1"
+                        ><i class="fas fa-edit"></i></a
+                      ><a href="#" id="getDelete" class="text-danger"
+                        ><i class="fas fa-trash-alt"></i
+                      ></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const $ = document.querySelector.bind(document);
+      const $$ = document.querySelectorAll.bind(document);
+
+      const initStudents = JSON.parse(localStorage.getItem("student")) || [];
+
+      const renderStudent = () => {
+        const HTML =
+          initStudents &&
+          initStudents
+            .map(
+              (student, index) => `
+        <tr>
+            <th scope="row">${index + 1}</th>
+            <td>${student.id}</td>
+            <td>${student.firstName + " " + student.lastName}</td>
+            <td>${
+              student.gender
+                ? '<i class="fas fa-male text-primary"></i>'
+                : '<i class="fas fa-female text-warning"></i>'
+            }</td>
+            <td>${student.phone}</td>
+            <td>${student.email}</td>
+            <td>
+                <button data-bs-toggle="modal" data-bs-target="#formModal" onclick="handleEditStudent(${index})" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                <button onclick="handleDeleteStudent(${index})" class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        `
+            )
+            .join("");
+        $("#tableStudentList").innerHTML = HTML;
+      };
+
+      const handleAddStudent = () => {
+        const emailparttern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //dadas@asdsa.asdasd
+        const firstName = $("#outputLastName").value;
+        const lastName = $("#outputFirtsName").value;
+        const genderMale = $("#genderMale").checked;
+        const id = $("#outputID").value;
+        const phone = $("#outputPhone").value;
+        const email = $("#outputEmail").value;
+        if (
+          firstName === "" ||
+          lastName === "" ||
+          phone === "" ||
+          !emailparttern.test(email) ||
+          id === ""
+        ) {
+          if (!emailparttern.test(email)) {
+            $("#btnSave").setAttribute("data-bs-dismiss", "");
+            alert("Email invalidate");
+          }
+          $("#btnSave").setAttribute("data-bs-dismiss", "");
+          alert("không được để trống");
+          return;
+        }
+        const data = {
+          id,
+          firstName,
+          lastName,
+          gender: genderMale,
+          phone,
+          email,
+        };
+        initStudents.push(data);
+        $("#btnSave").setAttribute("data-bs-dismiss", "modal");
+        renderStudent();
+        localStorage.setItem("student", JSON.stringify(initStudents));
+      };
+
+      const handleDeleteStudent = (index) => {
+        initStudents.splice(index, 1);
+        renderStudent();
+        localStorage.setItem("student", JSON.stringify(initStudents));
+      };
+
+      $("#btnSave").onclick = handleAddStudent;
+
+      renderStudent();
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

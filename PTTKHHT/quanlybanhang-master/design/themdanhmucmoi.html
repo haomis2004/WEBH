@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quản lý bán hàng</title>
+    
+    <link type="text/css" href="files/css/main.css" rel="stylesheet" />
+	<script type="text/javascript" src="files/js/jquery_min.js"></script>
+    <script type="text/javascript" src="files/js/danhmuc.js"></script>
+</head>
+
+<body>
+	<!--HEADER-->
+    <div class="header">
+    	<a href="danhmuc.html" title="Quản lý bán hàng" style="outline:none;"><h1>QUẢN LÝ BÁN HÀNG</h1></a>
+        <div class="logout">
+            Xin chào <b>Dương Diệu Pháp</b> | <a href="#" title="Log out">Log out</a>
+        </div>
+        <!--NAVIGATION BAR-->
+        <ul class="navigation">
+        	<a href="danhmuc.html" title="Danh mục sản phẩm"  class="navigation-item-selected"><li>Danh mục sản phẩm</li></a>
+            <a href="sanpham.html" title="Quản lý sản phẩm"><li>Quản lý sản phẩm</li></a>
+            <a href="donhang.html" title="Quản lý đơn hàng"><li>Quản lý đơn hàng</li></a>
+            <a href="khachhang.html" title="Quản lý khách hàng"><li>Quản lý khách hàng</li></a>
+            <a href="nguoidung.html" title="Quản lý người dùng"><li>Quản lý người dùng</li></a>
+        </ul><!--NAVIGATION BAR-->
+    </div><!--END HEADER-->
+    
+    <!--CONTENT-->
+    <div class="content">
+    	<p class="content-title">Thêm danh mục mới</p>
+        <form name="frmThemDanhMucMoi" id="frmThemDanhMucMoi" method="post" action="#">
+        	Tên danh mục:<br/>
+            <input type="text" class="txt" name="txtTenDanhMuc" id="txtTenDanhMuc" required style="width:300px;" />
+            <input type="submit" class="btn" name="btnThemDanhMuc" id="btnThemDanhMuc" value="Thêm" />
+        </form>
+    </div><!--END CONTENT-->
+    
+    <!--FOOTER-->
+   
+    
+</body>
+</html>

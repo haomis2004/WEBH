@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 24, 2013 9:20:04 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOs.Chitietdonhang" table="chitietdonhang" schema="dbo" catalog="dbQLBH">
+        <id name="mactdonhang" type="int">
+            <column name="mactdonhang" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="sanpham" class="POJOs.Sanpham" fetch="join" lazy="false">
+            <column name="masanpham" />
+        </many-to-one>
+        <many-to-one name="donhang" class="POJOs.Donhang" fetch="join" lazy="false">
+            <column name="madonhang" />
+        </many-to-one>
+        <property name="soluong" type="java.lang.Integer">
+            <column name="soluong" />
+        </property>
+    </class>
+</hibernate-mapping>

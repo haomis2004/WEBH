@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Thanh Toán</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="css/giohang.css">
+</head>
+
+<body>
+    <h2 class="text-center">Thanh Toán Hóa Đơn</h2>
+    <div class="container" data-ng-app="" data-ng-init="quantity=1;price=5">
+        <table id="cart" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:50%">Tên sản phẩm</th>
+                    <th style="width:10%">Giá</th>
+                    <th style="width:8%">Số lượng</th>
+                    <th style="width:22%" class="text-center">Thành tiền</th>
+                    <th style="width:10%"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"><img src="img" alt="Sản phẩm 1"
+                                    class="img-responsive" width="100"> </div>
+                            <div class="col-sm-10">
+                                <h4 class="nomargin">Bạc xĩu</h4>
+                                <p>Mô tả của sản phẩm </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="Price" ng-model="price" type="number" data-ng-init="price=25000" >25.000 đ</td>
+                    <td data-th="Quantity"><input class="form-control text-center" value="1" type="number" ng-model="quantity">
+                    </td>
+                    <td data-th="Subtotal" class="text-center">{{quantity * price}} đ</td>
+                    <td class="actions" data-th="">
+                        <button onclick="myDeleteFunction()">Xoá</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"><img src="images/sinh-to-bo-thuong-thuc.jpg"
+                                    alt="Sản phẩm 1" class="img-responsive" width="100">
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="nomargin">Sinh Tố Bơ</h4>
+                                <p>Mô tả của sản phẩm </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="Price" ng-model="price1" type="number" data-ng-init="price1=20000" >20.000 đ</td>
+                    <td data-th="Quantity"><input class="form-control text-center" value="1" type="number" ng-model="quantity1">
+                    </td>
+                    <td data-th="Subtotal" class="text-center">{{quantity1 * price1}} đ</td>
+                    <td class="actions" data-th="">
+                        <button onclick="myDeleteFunction()">Xoá</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"><img src="images/tra-sua-socola-3.png" alt="Sản phẩm 1"
+                                    class="img-responsive" width="100">
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="box">
+                                    <h4 class="nomargin">Trà Sữa Socola</h4>
+                                    <p>Mô tả của sản phẩm </p>
+                                </div>
+                            </div>
+                    </td>
+                    <td data-th="Price" ng-model="price1" type="number" data-ng-init="price2=18000" >18.000 đ</td>
+                    <td data-th="Quantity"><input class="form-control text-center" value="1" type="number" ng-model="quantity2">
+                    </td>
+                    <td data-th="Subtotal" class="text-center">{{quantity2 * price2}} đ</td>
+    </div>
+    <td class="actions" data-th="">
+        <button onclick="myDeleteFunction()">Xoá</button>
+    </td>
+    </tr>
+
+    <tr>
+        <td data-th="Product">
+            <div class="row">
+                <div class="col-sm-2 hidden-xs"><img src="images/sting.jpg" alt="Sản phẩm 1" class="img-responsive"
+                        width="100">
+                </div>
+                <div class="col-sm-10">
+                    <div class="box">
+                        <h4 class="nomargin">Sting</h4>
+                        <p>Mô tả của sản phẩm </p>
+                    </div>
+                </div>
+        </td>
+        <td data-th="Price" ng-model="price1" type="number" data-ng-init="price3=12000" >12.000 đ</td>
+        <td data-th="Quantity"><input class="form-control text-center" value="1" type="number" ng-model="quantity3">
+        </td>
+        <td data-th="Subtotal" class="text-center">{{quantity3 * price3}} đ</td>
+        </div>
+        <td class="actions" data-th="">
+
+            <button onclick="myDeleteFunction()">Xoá</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td data-th="Product">
+            <div class="row">
+                <div class="col-sm-2 hidden-xs"><img src="images/nuoceptao.jpg" alt="Sản phẩm 1" class="img-responsive"
+                        width="100">
+                </div>
+                <div class="col-sm-10">
+                    <div class="box">
+                        <h4 class="nomargin">Nước ép Táo</h4>
+                        <p>Mô tả của sản phẩm </p>
+                    </div>
+                </div>
+        </td>
+        <td data-th="Price" ng-model="price1" type="number" data-ng-init="price4=18000" >18.000 đ</td>
+        <td data-th="Quantity"><input class="form-control text-center" value="1" type="number" ng-model="quantity4">
+        </td>
+        <td data-th="Subtotal" class="text-center">{{quantity4 * price4}} đ</td>
+        </div>
+        <td class="actions" data-th="">
+
+            <button onclick="myDeleteFunction()">Xoá</button>
+        </td>
+    </tr>
+
+
+    </tbody>
+    <tfoot>
+        </tr>
+        <tr>
+            <td><a href="menu.html#menu" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+            <td colspan="2" class="hidden-xs"> </td>
+            <td class="hidden-xs text-center"><strong></strong>
+            <td><a href="" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+        </tr>
+    </tfoot>
+    </table>
+    </div>
+    <script>
+        function myCreateFunction() {
+            var table = document.getElementById("cart");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "NEW CELL1";
+            cell2.innerHTML = "NEW CELL2";
+        }
+
+        function myDeleteFunction() {
+            document.getElementById("cart").deleteRow(1);
+        }
+        function deleteItem(cart) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].Id == x) {
+                    data.splice(i, 1)
+
+                    render()
+                }
+            }
+        }
+        function printCash() {
+
+        }
+        function calculateAmount(val) {
+            var tot_price = val * 100;
+            /*display the result*/
+            var divobj = document.getElementById('tot_amount');
+            divobj.value = tot_price;
+        }
+    </script>
+</body>
+
+</html>

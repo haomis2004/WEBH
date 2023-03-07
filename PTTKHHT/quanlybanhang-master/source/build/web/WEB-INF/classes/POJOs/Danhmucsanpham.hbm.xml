@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 24, 2013 9:20:04 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOs.Danhmucsanpham" table="danhmucsanpham" schema="dbo" catalog="dbQLBH">
+        <id name="madanhmuc" type="int">
+            <column name="madanhmuc" />
+            <generator class="native" />
+        </id>
+        <property name="tendanhmuc" type="string">
+            <column name="tendanhmuc" />
+        </property>
+        <property name="trangthai" type="java.lang.Integer">
+            <column name="trangthai" />
+        </property>
+        <set name="sanphams" inverse="true" cascade="delete">
+            <key>
+                <column name="madanhmucsanpham" />
+            </key>
+            <one-to-many class="POJOs.Sanpham" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 24, 2013 9:20:04 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOs.Taikhoan" table="taikhoan" schema="dbo" catalog="dbQLBH">
+        <id name="mataikhoan" type="int">
+            <column name="mataikhoan" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="loaitaikhoan" class="POJOs.Loaitaikhoan" fetch="select">
+            <column name="maloaitaikhoan" />
+        </many-to-one>
+        <property name="tentruycap" type="string">
+            <column name="tentruycap" />
+        </property>
+        <property name="matkhau" type="string">
+            <column name="matkhau" />
+        </property>
+        <property name="hoten" type="string">
+            <column name="hoten" />
+        </property>
+        <property name="trangthai" type="java.lang.Integer">
+            <column name="trangthai" />
+        </property>
+    </class>
+</hibernate-mapping>

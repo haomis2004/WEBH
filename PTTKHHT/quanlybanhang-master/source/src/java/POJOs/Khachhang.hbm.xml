@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 24, 2013 9:20:04 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOs.Khachhang" table="khachhang" schema="dbo" catalog="dbQLBH">
+        <id name="makhachhang" type="int">
+            <column name="makhachhang" />
+            <generator class="native" />
+        </id>
+        <property name="hoten" type="string">
+            <column name="hoten" />
+        </property>
+        <property name="gioitinh" type="java.lang.Integer">
+            <column name="gioitinh" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="ngaysinh" type="timestamp">
+            <column name="ngaysinh" length="23" />
+        </property>
+        <property name="trangthai" type="java.lang.Integer">
+            <column name="trangthai" />
+        </property>
+        <set name="donhangs" inverse="true" cascade="delete"  >
+            <key>
+                <column name="makhachhang" />
+            </key>
+            <one-to-many class="POJOs.Donhang" />
+        </set>
+    </class>
+</hibernate-mapping>
